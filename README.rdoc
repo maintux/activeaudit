@@ -1,6 +1,6 @@
-= activeaudit
+= Active Audit
 
-Description goes here.
+Audit support for Active Record
 
 == Contributing to activeaudit
  
