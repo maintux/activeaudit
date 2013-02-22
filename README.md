@@ -55,7 +55,7 @@ It's possible to use custom event name that is managed like an update event. For
 loggable_event confirmation: [{state: "confirmed"}]
 ```
 
-## Contributing to activeaudit
+## Contributing to ActiveAudit
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
