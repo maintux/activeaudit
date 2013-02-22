@@ -42,7 +42,7 @@ If you want customize the fields that determine the logging action, you can use 
 ```ruby
 loggable_event update: [:name,:surname]
 ```
-So with this syntax, ActiveAudit will log the update event only if `name` and `surname` fields are changed.
+So with this syntax, ActiveAudit will log the update event only if `name` __OR__ `surname` fields are changed.
 
 You can also specify the value that a field must have to trigger the logging:
 ```ruby
