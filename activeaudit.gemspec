@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.email = "maintux@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     "app/models/active_audit/audit.rb",
