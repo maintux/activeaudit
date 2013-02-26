@@ -2,6 +2,8 @@
 
 Audit support for Active Record
 
+[![Build Status](https://travis-ci.org/maintux/activeaudit.png)](https://travis-ci.org/maintux/activeaudit)
+
 ## Install
 
 Include `ActiveAudit` in your Gemfile
