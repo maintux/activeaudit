@@ -11,6 +11,14 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
+require 'rspec'
+require 'rspec/core/rake_task'
+desc "Run all examples"
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.ruby_opts = %w[-w]
+  t.rspec_opts = %w[--color]
+end
+
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
@@ -25,13 +33,6 @@ Jeweler::Tasks.new do |gem|
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
-
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|

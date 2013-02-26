@@ -11,12 +11,17 @@ module ActiveAudit
       after_update :log_activity_on_update
       before_destroy :log_activity_on_destroy
 
+      attr_accessible :audit_user_id
       attr_accessor :audit_user_id
 
       @@_loggable_events = {}
 
       def self.loggable_event(event)
         @@_loggable_events.merge! event
+      end
+
+      def self.loggable_events
+        @@_loggable_events
       end
 
       def log_activity_on_create
