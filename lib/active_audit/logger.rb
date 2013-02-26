@@ -34,15 +34,9 @@ module ActiveAudit
             v.each do |field|
               if field.is_a?(Hash)
                 key, value = field.first
-                if self.send(key.to_s).eql?(value)
-                  log_event = true
-                  break
-                end
+                log_event = true and break if self.send(key.to_s).eql?(value)
               elsif field.is_a?(Symbol)
-                if self.send(field.to_s)
-                  log_event = true
-                  break
-                end
+                log_event and break if self.send(field.to_s)
               end
             end
             if log_event
@@ -63,15 +57,9 @@ module ActiveAudit
               v.each do |field|
                 if field.is_a?(Hash)
                   key, value = field.first
-                  if self.send("#{key}_changed?") and self.send(key.to_s).eql?(value)
-                    log_event = true
-                    break
-                  end
+                  log_event = true and break if self.send("#{key}_changed?") and self.send(key.to_s).eql?(value)
                 elsif field.is_a?(Symbol)
-                  if self.send("#{field}_changed?")
-                    log_event = true
-                    break
-                  end
+                  log_event = true and break if self.send("#{field}_changed?")
                 end
               end
               if log_event

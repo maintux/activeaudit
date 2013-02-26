@@ -3,6 +3,7 @@
 Audit support for Active Record
 
 [![Build Status](https://travis-ci.org/maintux/activeaudit.png)](https://travis-ci.org/maintux/activeaudit)
+[![Code Climate](https://codeclimate.com/github/maintux/activeaudit.png)](https://codeclimate.com/github/maintux/activeaudit)
 
 ## Install
 
