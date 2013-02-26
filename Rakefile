@@ -25,11 +25,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = "activeaudit"
   gem.homepage = "http://github.com/maintux/activeaudit"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Audit support for Active Record"
+  gem.description = "Audit support for Active Record"
   gem.email = "maintux@gmail.com"
   gem.authors = ["Massimo Maino"]
-  gem.files = ['lib/**/*.rb','db/**/*.rb','app/**/*.rb']
+  gem.files = ['lib/**/*.rb','db/**/*.rb','app/**/*.rb','spec/**/*.rb']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

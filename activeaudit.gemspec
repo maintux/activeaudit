@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Massimo Maino"]
-  s.date = "2013-02-21"
-  s.description = "TODO: longer description of your gem"
+  s.date = "2013-02-26"
+  s.description = "Audit support for Active Record"
   s.email = "maintux@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -21,13 +21,17 @@ Gem::Specification.new do |s|
     "db/migrate/1_create_active_audits.rb",
     "lib/active_audit/engine.rb",
     "lib/active_audit/logger.rb",
-    "lib/activeaudit.rb"
+    "lib/activeaudit.rb",
+    "spec/callbacks_spec.rb",
+    "spec/core_spec.rb",
+    "spec/models/person.rb",
+    "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/maintux/activeaudit"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "Audit support for Active Record"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
@@ -36,15 +40,27 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_development_dependency(%q<rspec>, [">= 0"])
+      s.add_development_dependency(%q<activerecord>, [">= 0"])
+      s.add_development_dependency(%q<sqlite3>, [">= 0"])
+      s.add_development_dependency(%q<faker>, [">= 0"])
     else
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+      s.add_dependency(%q<rspec>, [">= 0"])
+      s.add_dependency(%q<activerecord>, [">= 0"])
+      s.add_dependency(%q<sqlite3>, [">= 0"])
+      s.add_dependency(%q<faker>, [">= 0"])
     end
   else
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
     s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.4"])
+    s.add_dependency(%q<rspec>, [">= 0"])
+    s.add_dependency(%q<activerecord>, [">= 0"])
+    s.add_dependency(%q<sqlite3>, [">= 0"])
+    s.add_dependency(%q<faker>, [">= 0"])
   end
 end
 
