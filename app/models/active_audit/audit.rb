@@ -4,8 +4,8 @@ class ActiveAudit::Audit < ActiveRecord::Base
   validates_presence_of :obj_id, :obj_type, :activity
 
   if defined?(::Rails)
-    if File.exists?(File.join(Rails.root.to_s,'app','concerns','active_audit','audit_concern.rb'))
-      require File.join(Rails.root.to_s,'app','concerns','active_audit','audit_concern.rb')
+    if File.exists?(File.join(Rails.root.to_s,'app','models','concerns','active_audit','audit_concern.rb'))
+      require File.join(Rails.root.to_s,'app','models','concerns','active_audit','audit_concern.rb')
     end
     if defined?(::ActiveAudit::AuditConcern)
       include ::ActiveAudit::AuditConcern
