@@ -9,6 +9,7 @@ require 'active_audit/logger'
 require 'active_record'
 require 'faker'
 require './db/migrate/1_create_active_audits'
+require './db/migrate/2_add_extras_to_active_audits'
 
 puts "Removing test database..."
 if File.exist? "spec/db/active_audit_test.sqlite3"
@@ -21,6 +22,7 @@ ActiveRecord::Base.establish_connection(
 puts "Creating test tables..."
 ActiveRecord::Base.connection.execute("CREATE TABLE `people`(`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT, `surname` TEXT, `email` TEXT, `age` INT, `created_at` DATETIME, `updated_at` DATETIME);")
 CreateActiveAudits.migrate :up
+AddExtrasToActiveAudits.migrate :up
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true

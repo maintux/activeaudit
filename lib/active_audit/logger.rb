@@ -7,7 +7,7 @@ module ActiveAudit
 
     included do
 
-      has_many :audits, class_name: "ActiveAudit::Audit", as: :obj, dependent: :destroy
+      has_many :audits, class_name: "ActiveAudit::Audit", as: :obj
 
       after_create :log_activity_on_create
       after_update :log_activity_on_update

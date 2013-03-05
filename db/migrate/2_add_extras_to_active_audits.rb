@@ -1,3 +1,5 @@
 class AddExtrasToActiveAudits < ActiveRecord::Migration
-  add_column :audits, :extras, :text
+  def change
+    add_column :audits, :extras, :text
+  end
 end
