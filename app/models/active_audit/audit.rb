@@ -6,9 +6,9 @@ class ActiveAudit::Audit < ActiveRecord::Base
 
   if defined?(::Rails)
     if File.exists?(File.join(Rails.root.to_s,'app','models','concerns','active_audit','audit_concern.rb'))
-      require File.join(Rails.root.to_s,'app','models','concerns','active_audit','audit_concern')
-      if defined?(::ActiveAudit::AuditConcern)
-        include ::ActiveAudit::AuditConcern
+      require_or_load File.join(Rails.root.to_s,'app','models','concerns','active_audit','audit_concern')
+      if defined?(ActiveAudit::AuditConcern)
+        include ActiveAudit::AuditConcern
       end
     end
   end

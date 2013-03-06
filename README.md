@@ -25,6 +25,14 @@ and execute migration
 rake db:migrate
 ```
 
+### Update from 0.1.2 to 0.1.3
+
+You have to installa new migration:
+```
+rake active_audit_rails_engine:install:migrations
+rake db:migrate
+```
+
 ## Usage
 
 In your model you have to include the mixin
