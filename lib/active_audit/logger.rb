@@ -14,6 +14,7 @@ module ActiveAudit
       before_destroy :log_activity_on_destroy
 
       attr_accessible :audit_user_id
+      attr_accessible :audit_extras
       attr_accessor :audit_user_id
       attr_accessor :audit_extras
 
