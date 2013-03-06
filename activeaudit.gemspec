@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "activeaudit"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Massimo Maino"]
-  s.date = "2013-03-05"
+  s.date = "2013-03-06"
   s.description = "Audit support for Active Record"
   s.email = "maintux@gmail.com"
   s.extra_rdoc_files = [
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = [
     "app/models/active_audit/audit.rb",
     "db/migrate/1_create_active_audits.rb",
+    "db/migrate/2_add_extras_to_active_audits.rb",
     "lib/active_audit/engine.rb",
     "lib/active_audit/logger.rb",
     "lib/activeaudit.rb",
